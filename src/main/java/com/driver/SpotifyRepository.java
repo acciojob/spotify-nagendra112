@@ -280,9 +280,9 @@ public class SpotifyRepository {
         if(songLikeMap.containsKey(song)){
             users=songLikeMap.get(song);
         }
-       // if (!users.contains(currUser)){
-            //users.add(currUser);
-           // songLikeMap.put(song, users);
+        if (!users.contains(currUser)){
+            users.add(currUser);
+            songLikeMap.put(song, users);
             song.setLikes(song.getLikes()+1);
 
             Album album = new Album();
